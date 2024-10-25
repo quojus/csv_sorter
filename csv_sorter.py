@@ -82,10 +82,8 @@ class CSVSorterGUI:
                 with open(file_path, 'r') as f:
                     # Direct raw reading of the first line to preserve exact formatting
                     raw_header_line = f.readline().strip()
-                    print(raw_header_line)
                     # Split by comma but preserve quoted strings
                     self.original_headers = raw_header_line.split(',')
-                    print(self.original_headers)
 
                 # DataFrame laden
                 self.df = pd.read_csv(file_path, quoting=0)
